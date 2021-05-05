@@ -24,8 +24,9 @@ const person = {
 // person.role.push('admin');
 // person.role[1] = 10;
 
-let favoriteActivities: string[];
-favoriteActivities = ['Sports']
+// ? Any is flexible but it takes away every advantages TypeScript gives you
+let favoriteActivities: any[];
+favoriteActivities = ['Sports', 7]
 
 console.log(person.name);
 
