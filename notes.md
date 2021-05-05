@@ -1,6 +1,6 @@
 ## Core Types
 
-number string boolean object array NEWtuple
+number string boolean object array NEWtuple NEWenum
 
 ## Good to know
 
