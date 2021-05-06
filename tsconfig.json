@@ -68,11 +68,16 @@
     "skipLibCheck": true,                           /* Skip type checking of declaration files. */
     "forceConsistentCasingInFileNames": true        /* Disallow inconsistently-cased references to the same file. */
   },
-  // If you want to exclude files from the compiler do like this:
+  // * If you want to exclude files from the compiler do like this:
   "exclude": [
-    "node_modules",
+    "node_modules", // would be default
     // "analytics.ts", // Exclude only one file
     // "*.dev.ts", // Excludes all files that ends with .dev.ts
     // "**/*.dev.ts" // Excludes all files that ends with .dev.ts in every folder
-  ]
+  ],
+  // * Use include if you only want to compile specific files or folders
+  // "include": [
+  //   "app.ts",
+  //   "analytis.ts" ,
+  // ]
 }
