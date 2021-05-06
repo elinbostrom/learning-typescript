@@ -1,41 +1,20 @@
-// const person: {
-//   name: string;
-//   age: number;
-//   hobbies: string[];
-//   role: [number, string];
-// }  = {
-//   name: 'Elin',
-//   age: 27,
-//   hobbies: ['Sports', 'Cooking'],
-//   role: [2, 'author']
-// }
+// Union types
 
-// ? You can also declear types to the enum. Otherwise it will start at 0
-// enum Role { ADMIN = 5 , READ_ONLY = 'READ_ONLY', AUTHOR = 'AUTHOR' };
-enum Role { ADMIN, READ_ONLY, AUTHOR };
+function combine(input1: number | string, input2: number | string) {
+  let result;
 
-const person = {
-  name: 'Elin',
-  age: 27,
-  hobbies: ['Sports', 'Cooking'],
-  role: Role.ADMIN
+  if(typeof input1 === 'number' && typeof input2 === 'number') {
+    result = input1 + input2
+  } else {
+    result = input1.toString() + input2.toLocaleString()
+  }
+  return result
 }
 
-// person.role.push('admin');
-// person.role[1] = 10;
-
-// ? Any is flexible but it takes away every advantages TypeScript gives you
-let favoriteActivities: any[];
-favoriteActivities = ['Sports', 7]
-
-console.log(person.name);
-
-for (const hobby of person.hobbies) {
-  console.log(hobby.toUpperCase());
-}
+const combinedAges = combine(30,26)
+console.log(combinedAges);
 
 
-if(person.role === Role.AUTHOR) {
-  console.log('is author');
-  
-}
+const combinedNames = combine('Max', 'Anna')
+console.log(combinedNames);
+
