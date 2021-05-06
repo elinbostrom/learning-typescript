@@ -15,3 +15,12 @@ userInput = 'Elin';
 if(typeof userInput === 'string'){
   userName = userInput
 }
+
+// ? Never is also a type like void that functions can't return
+// ? Declear never to functions to make it more readable 
+function generateError(message: string, code: number): never {
+  throw {message: message, errorCode: code};
+  // while(true) {}
+}
+
+generateError('An error occured!', 500)
