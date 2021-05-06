@@ -1,32 +1,21 @@
-type Combinable = number | string;
-type ConversionDescriptor = 'as-number' | 'as-text';
+// Functions
+// ? You can set a function type to which datatype you want it to return like this.
+// function add(n1: number, n2: number) : number {
+//   return n1 + n2
+// }
+// ? But it is not preferable
 
-function combine(
-  input1: Combinable,
-  input2: Combinable, 
-  resultConversion: ConversionDescriptor
-  ) {
-  let result;
 
-  if(typeof input1 === 'number' && typeof input2 === 'number' || resultConversion === 'as-number') {
-    result = +input1 + +input2
-  } else {
-    result = input1.toString() + input2.toLocaleString()
-  }
-  return result;
-  // if(resultConversion === 'as-number'){
-  //   return +result;
-  // } else {
-  //   return result.toString()
-  // }
+function add(n1: number, n2: number) {
+  return n1 + n2
 }
 
-const combinedAges = combine(30,26, 'as-number')
-console.log(combinedAges);
+// ? This function doesn't have a return statement which gives it the type of void
+function printResult(num: number){
+  console.log('Result: ' + num);
+}
+// ? A function is not allowed to return the type "undefined"
+// * Void is the standard that you should use. 
+// ! Undefined is not preferable but in some cases you want to return "undefined"
 
-const combinedStringAges = combine('30','26', 'as-number')
-console.log(combinedStringAges);
-
-const combinedNames = combine('Max', 'Anna', 'as-text')
-console.log(combinedNames);
-
+printResult(add(5,12))
