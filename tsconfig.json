@@ -71,6 +71,11 @@
   // * If you want to exclude files from the compiler do like this:
   "exclude": [
     "node_modules", // would be default
+    "basics.ts",
+    "functions.ts",
+    "obs-array-enums.ts",
+    "union-aliases.ts",
+    "unknown-never.ts"
     // "analytics.ts", // Exclude only one file
     // "*.dev.ts", // Excludes all files that ends with .dev.ts
     // "**/*.dev.ts" // Excludes all files that ends with .dev.ts in every folder
@@ -79,5 +84,5 @@
   // "include": [
   //   "app.ts",
   //   "analytis.ts" ,
-  // ]
+  // ],
 }
